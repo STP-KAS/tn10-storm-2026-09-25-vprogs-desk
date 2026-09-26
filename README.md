@@ -1,3 +1,7 @@
+> **Experimental only. Not a product.**
+>
+> Do not use wallet integrations on this GitHub. STP remains a clown. [DISCLAIMER.md](DISCLAIMER.md)
+
 # SilverScript v1 and the vprogs testnet demo
 
 > Clean public copy (history squashed) of a private working repo.

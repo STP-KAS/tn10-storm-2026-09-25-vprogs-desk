@@ -4,7 +4,7 @@ Experimental. Not Kaspa core. Not an audit. Not advice.
 
 25 Sep 2026, written at 22:07 Europe/Brussels. Keys stayed on this machine. Nothing in this file is a seed or a private key.
 
-Two private records sit behind this note. The match that finished is in this repo (`campaign/PLAY.md`, `campaign/FINISH.md`). The earlier wallet flood and the carriers the lane never applied are in `STP-KAS/grok-build-vprogs`.
+Two records sit behind this note (both were private when it was written). The match that finished is in this repo (`campaign/PLAY.md`, `campaign/FINISH.md`). The earlier wallet flood and the carriers the lane never applied are in [`STP-KAS/grok-build-vprogs`](https://github.com/STP-KAS/grok-build-vprogs), now public.
 
 ## The match the lane finished
 
@@ -57,7 +57,7 @@ These used the public TN10 resolver and rusty-kaspa 2.1.0 parameters. The halted
 
 **How much one wallet could offer.** The Python pass in `grok-build-vprogs` accepted 320 then 340 minimum sweeps, peak offered about 1162 tx/s for a fraction of a second, all included. Signing on that host was about 13200 a second. The protocol ceiling for that shape is about 3079 tx/s (10 blocks a second, 500000 compute mass, 1624 each). The wallet ran out of confirmed inputs before it reached that ceiling. A quiet TN10 sample in the same pass was about 37 accepted tx/s. A 20 second window around the second wave showed about 2064 accepted tx/s on the selected chain, mostly other traffic.
 
-The Node follow-up on this desk, `scripts/blast.mjs`, is not in that private repo yet. Its summary: 23574 accepted, 427 rejected, 0 sign failures, peak offered 751.5 tx/s, mean confirm about 37 seconds, mempool 13005 at the end, 24001 outputs prepared. 426 of the rejects were an output already spent in the mempool. `scripts/scale.mjs` was still splitting confirmed coins when this note was written (round 33, 800 inputs, 0 failures). That run is preparation for a longer lane. It had not started the timed spend.
+The Node follow-up on this desk, `scripts/blast.mjs`, is not in that repo yet. Its summary: 23574 accepted, 427 rejected, 0 sign failures, peak offered 751.5 tx/s, mean confirm about 37 seconds, mempool 13005 at the end, 24001 outputs prepared. 426 of the rejects were an output already spent in the mempool. `scripts/scale.mjs` was still splitting confirmed coins when this note was written (round 33, 800 inputs, 0 failures). That run is preparation for a longer lane. It had not started the timed spend.
 
 **SilverScript, on the other path.** Tag v1.0.0 (`3ed9733`) stamps `compiler_version` 0.1.0. `pragma silverscript ^0.1.0` compiles `l1-floor.sil`. `pragma silverscript ^1.0.0` is rejected, because that range would cover a future major. The contract was not broadcast.
 
@@ -77,5 +77,5 @@ The L1 limits measured here are ordinary Kaspa mass rules. Compute mass sets the
 | 1 tKAS desk send, zero-output SDK refusal | `campaign/SEND.md`, `campaign/DESK.md` |
 | Two-hour public samples | `campaign/samples.jsonl` |
 | SilverScript pragma | `campaign/pragma-check.txt` |
-| Wallet flood, mass, the ignored match | private repo `STP-KAS/grok-build-vprogs` |
+| Wallet flood, mass, the ignored match | [`STP-KAS/grok-build-vprogs`](https://github.com/STP-KAS/grok-build-vprogs) (public now; private when written) |
 | Node blast and the mempool reject | local `grok-build-vprogs/metrics/`, not pushed |
