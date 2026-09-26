@@ -1,0 +1,7 @@
+pragma silverscript ^1.0.0;
+
+contract TooNew(int floor) {
+    entry check(int n) {
+        require(n >= floor);
+    }
+}

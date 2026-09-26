@@ -1,0 +1,4 @@
+v1.0.0 tag, COMPILER_VERSION 0.1.0
+l1-floor.sil pragma ^0.1.0 compiled: True
+pragma ^1.0.0 rejected: True
+rejection: compiler cannot support pragmas that cover future major versions

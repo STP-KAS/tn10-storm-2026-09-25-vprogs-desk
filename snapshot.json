@@ -1,0 +1,47 @@
+{
+  "takenAt": "2026-09-25T15:17:16.086Z",
+  "url": "https://vprogs-tt.izio.fr",
+  "http": {
+    "state": 200,
+    "games": 200,
+    "exits": 200,
+    "postGames": 405
+  },
+  "covenantId": "85165a6f453dbbd1e968c238966e297046b8f1d22c00fee1bc208de00c3fb097",
+  "depositAddress": "kaspatest:prq3aw079nzygqz9uj9jhjfwrps0k7x0fwr6s09wemtxqytvxn4960smyz5v8",
+  "laneSubnet": "865832ec00000000000000000000000000000000",
+  "firstTip": 483655,
+  "secondTip": 483679,
+  "tipPerSecond": 6,
+  "settlementUnchanged": true,
+  "settled": {
+    "txid": "4bf9b325b448316f78a77ce5e22545eabb8a75090e549d01f3e4886a0557e017",
+    "daaScore": 580137056,
+    "stateRoot": "8d046a2d20d5ad5064da02c2dc570bcb0eebb9d5ef84fa45096d4b69ee144273"
+  },
+  "games": [
+    {
+      "state": "Open",
+      "stake": 500000000,
+      "pot": 1000000000,
+      "rounds": 3,
+      "players": 1,
+      "lastMoveAt": 0
+    },
+    {
+      "state": "Open",
+      "stake": 50000000,
+      "pot": 100000000,
+      "rounds": 3,
+      "players": 1,
+      "lastMoveAt": 0
+    }
+  ],
+  "exits": {
+    "roots": 11,
+    "leaves": 13,
+    "unspent": 11,
+    "daaMin": 579220923,
+    "daaMax": 580137056
+  }
+}

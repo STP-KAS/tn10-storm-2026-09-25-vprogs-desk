@@ -1,0 +1,17 @@
+--- a/l1/bridge/src/worker.rs
++++ b/l1/bridge/src/worker.rs
+@@ -771,10 +771,16 @@
+             return Err(Error::ReorgBelowRoot(*fork_child_hash));
+         };
+         let new_tip = self.sink.metadata(fork_child).expect("a known id has metadata").parent_id;
++        // A parent that is no longer in the live window is below the floor. Rolling there
++        // fabricates a checkpoint and then panics on the next tip read. Genesis (0) stays legal.
++        if new_tip != 0 && self.sink.metadata(new_tip).is_none() {
++            return Err(Error::ReorgBelowRoot(*fork_child_hash));
++        }
+ 
+         // Blue-score depth (old tip minus new tip) feeds the reorg filter.
+         let old_blue = self.sink.metadata(self.sink.tip()).map_or(0, |m| m.blue_score);
+         let new_blue = self.sink.metadata(new_tip).map_or(0, |m| m.blue_score);
+         let blue_score_depth = old_blue.saturating_sub(new_blue);
+         self.reorg_filter.record(blue_score_depth);
