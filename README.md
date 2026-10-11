@@ -1,12 +1,16 @@
 > **Experimental only. Not a product.**
 >
 > Do not use wallet integrations on this GitHub. STP remains a clown. [DISCLAIMER.md](DISCLAIMER.md)
+>
+> **Part of [tn-master](https://github.com/STP-KAS/tn-master)**, the map of every TN10 storm. Renamed on 11 Oct 2026 from `vprogs-tn-desk-public`; old links redirect here.
+>
+> ← previous storm: [tn10-storm-2026-09-25-r2](https://github.com/STP-KAS/tn10-storm-2026-09-25-r2) | next storm: [tn10-storm-2026-09-26-bot-opinion](https://github.com/STP-KAS/tn10-storm-2026-09-26-bot-opinion) →
 
 # SilverScript v1 and the vprogs testnet demo
 
 > Clean public copy (history squashed) of a private working repo.
 >
-> **Copy of private repo `STP-KAS/vprogs-tn-desk` (history squashed for privacy).** Originally created **25 Sep 2026 17:18 CEST**, last updated **26 Sep 2026 05:03 CEST**. The desk note records one pass on **25 Sep 2026** (API snapshot 17:17 CEST), plus the Windows desk campaign opened **25 Sep 2026 23:51 CEST** and planned to run until **26 Sep 2026 04:55 CEST**. The single commit here is dated 26 Sep 2026 only because history was squashed. Local user paths were replaced with `<user>` and email addresses were removed.
+> **Copy of private repo `STP-KAS/tn10-storm-2026-09-25-vprogs-desk-private` (history squashed for privacy).** Originally created **25 Sep 2026 17:18 CEST**, last updated **26 Sep 2026 05:03 CEST**. The desk note records one pass on **25 Sep 2026** (API snapshot 17:17 CEST), plus the Windows desk campaign opened **25 Sep 2026 23:51 CEST** and planned to run until **26 Sep 2026 04:55 CEST**. The single commit here is dated 26 Sep 2026 only because history was squashed. Local user paths were replaced with `<user>` and email addresses were removed.
 
 Experimental desk note. Not Kaspa core. Not an audit. Not advice.
 

@@ -4,7 +4,7 @@ Experimental. Not Kaspa core. Not an audit. Not advice.
 
 25 Sep 2026, written at 22:07 Europe/Brussels. Keys stayed on this machine. Nothing in this file is a seed or a private key.
 
-Two records sit behind this note (both were private when it was written). The match that finished is in this repo (`campaign/PLAY.md`, `campaign/FINISH.md`). The earlier wallet flood and the carriers the lane never applied are in [`STP-KAS/grok-build-vprogs`](https://github.com/STP-KAS/grok-build-vprogs), now public.
+Two records sit behind this note (both were private when it was written). The match that finished is in this repo (`campaign/PLAY.md`, `campaign/FINISH.md`). The earlier wallet flood and the carriers the lane never applied are in [`STP-KAS/tn10-storm-2026-09-25-build`](https://github.com/STP-KAS/tn10-storm-2026-09-25-build), now public.
 
 ## The match the lane finished
 
@@ -18,7 +18,7 @@ The list endpoint does not show this game. `GET /api/games` returned 31 games, e
 
 ## The match the lane still ignores
 
-An earlier pass, recorded in `STP-KAS/grok-build-vprogs` as `results/tictactoe_join.json`, built the same kind of carriers for game `f8f4dcd43a7c54a532a0fa15c03d09dd7dd0fc951be45c592ae3af11dcec23ac`: a join, cells 0, 3, 1, 4, 2, then a withdraw. Those transactions were included on L1.
+An earlier pass, recorded in `STP-KAS/tn10-storm-2026-09-25-build` as `results/tictactoe_join.json`, built the same kind of carriers for game `f8f4dcd43a7c54a532a0fa15c03d09dd7dd0fc951be45c592ae3af11dcec23ac`: a join, cells 0, 3, 1, 4, 2, then a withdraw. Those transactions were included on L1.
 
 At 22:07 that game is still `Open`, one player, empty board, `last_move_at` 0. The lane has the bytes on Kaspa and has not turned them into a seat, a move, or a win.
 
@@ -26,7 +26,7 @@ A second game from that pass, `fe3206cdf574933bdbdb4f0503fc555ed168073ecd748487a
 
 Version-1 inputs have to be submitted with `sigOpCount` 0 and `computeBudget` set. `sigOpCount` 1 is rejected as inconsistent with transaction version 1.
 
-A later attempt from the Node scripts in the local `grok-build-vprogs` folder did not open a game. The node refused it: the output was already spent by another transaction in the mempool. `metrics/game.json` and `logs/play-one.out.log` hold that refusal. It is a double-spend of a coin the splitter was already using, not a guest error.
+A later attempt from the Node scripts in the local `tn10-storm-2026-09-25-build` folder did not open a game. The node refused it: the output was already spent by another transaction in the mempool. `metrics/game.json` and `logs/play-one.out.log` hold that refusal. It is a double-spend of a coin the splitter was already using, not a guest error.
 
 ## What the page is doing
 
@@ -55,7 +55,7 @@ These used the public TN10 resolver and rusty-kaspa 2.1.0 parameters. The halted
 
 **What the node refuses.** A zero-value output is rejected (`transaction output 0 has zero value`). The Kaspa SDK refuses the same shape earlier, with `Invalid transaction amount`, and submits nothing. A signature script that leaves a false stack entry is rejected. A fee of 1 sompi on a 1624-mass sweep is rejected. Those three refusals are in `metrics/probe.json` on the local Node run, and the zero-output SDK case is in `campaign/DESK.md`.
 
-**How much one wallet could offer.** The Python pass in `grok-build-vprogs` accepted 320 then 340 minimum sweeps, peak offered about 1162 tx/s for a fraction of a second, all included. Signing on that host was about 13200 a second. The protocol ceiling for that shape is about 3079 tx/s (10 blocks a second, 500000 compute mass, 1624 each). The wallet ran out of confirmed inputs before it reached that ceiling. A quiet TN10 sample in the same pass was about 37 accepted tx/s. A 20 second window around the second wave showed about 2064 accepted tx/s on the selected chain, mostly other traffic.
+**How much one wallet could offer.** The Python pass in `tn10-storm-2026-09-25-build` accepted 320 then 340 minimum sweeps, peak offered about 1162 tx/s for a fraction of a second, all included. Signing on that host was about 13200 a second. The protocol ceiling for that shape is about 3079 tx/s (10 blocks a second, 500000 compute mass, 1624 each). The wallet ran out of confirmed inputs before it reached that ceiling. A quiet TN10 sample in the same pass was about 37 accepted tx/s. A 20 second window around the second wave showed about 2064 accepted tx/s on the selected chain, mostly other traffic.
 
 The Node follow-up on this desk, `scripts/blast.mjs`, is not in that repo yet. Its summary: 23574 accepted, 427 rejected, 0 sign failures, peak offered 751.5 tx/s, mean confirm about 37 seconds, mempool 13005 at the end, 24001 outputs prepared. 426 of the rejects were an output already spent in the mempool. `scripts/scale.mjs` was still splitting confirmed coins when this note was written (round 33, 800 inputs, 0 failures). That run is preparation for a longer lane. It had not started the timed spend.
 
@@ -77,5 +77,5 @@ The L1 limits measured here are ordinary Kaspa mass rules. Compute mass sets the
 | 1 tKAS desk send, zero-output SDK refusal | `campaign/SEND.md`, `campaign/DESK.md` |
 | Two-hour public samples | `campaign/samples.jsonl` |
 | SilverScript pragma | `campaign/pragma-check.txt` |
-| Wallet flood, mass, the ignored match | [`STP-KAS/grok-build-vprogs`](https://github.com/STP-KAS/grok-build-vprogs) (public now; private when written) |
-| Node blast and the mempool reject | local `grok-build-vprogs/metrics/`, not pushed |
+| Wallet flood, mass, the ignored match | [`STP-KAS/tn10-storm-2026-09-25-build`](https://github.com/STP-KAS/tn10-storm-2026-09-25-build) (public now; private when written) |
+| Node blast and the mempool reject | local `tn10-storm-2026-09-25-build/metrics/`, not pushed |
