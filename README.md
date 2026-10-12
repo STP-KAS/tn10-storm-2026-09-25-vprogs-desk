@@ -1,6 +1,6 @@
 > **Experimental only. Not a product.**
 >
-> Do not use wallet integrations on this GitHub. STP remains a clown. [DISCLAIMER.md](DISCLAIMER.md)
+> Do not use wallet integrations on this GitHub. [DISCLAIMER.md](DISCLAIMER.md)
 >
 > **Part of [tn-master](https://github.com/STP-KAS/tn-master)**, the map of every TN10 storm. Renamed on 11 Oct 2026 from `vprogs-tn-desk-public`; old links redirect here.
 >
